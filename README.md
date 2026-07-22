@@ -1,5 +1,5 @@
 ## Book API (FastAPI + SQLite)
-A RESTful Book Management API built with **FastAPI**, **SQLite**, and **SQLAlchemy**. This project demonstrates how to connect FastAPI with a real database and perform complete CRUD (Create, Read, Update, Delete) operations. It follows a modular project structure and uses Pydantic for data validation.
+A Rest-ful Book Management API built with **FastAPI**, **SQLite**, and **SQLAlchemy**. This project demonstrates how to connect FastAPI with a real database and perform complete CRUD (Create, Read, Update, Delete) operations. It follows a modular project structure and uses Pydantic for data validation.
 ## Features
 - Create a new book
 - View all books
