@@ -1,15 +1,16 @@
-from pydantic import BaseModel, Field  
-class Student(BaseModel):
-    id: int
-    name: str = Field(..., min_length=2, max_length=50)
-    age: int = Field(..., gt=0, lt=100)
-    course: str = Field(..., min_length=2)
-class StudentCreate(BaseModel):
-    name: str = Field(..., min_length=2, max_length=50)
-    age: int = Field(..., gt=0, lt=100)
-    course: str = Field(..., min_length=2)
-class Book(BaseModel):
-    id: int = Field(..., gt=0)
-    title: str = Field(..., min_length=2, max_length=100)
-    author: str = Field(..., min_length=2, max_length=50)
-    price: float = Field(..., gt=0) 
+ from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import relationship
+from database import Base
+class User(Base):
+    __tablename__ = "users"
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, unique=True)
+    password = Column(String)
+    books = relationship("Book", back_populates="owner")
+class Book(Base):
+    __tablename__ = "books"
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String)
+    author = Column(String)
+    owner_id = Column(Integer, ForeignKey("users.id"))
+    owner = relationship("User", back_populates="books")
