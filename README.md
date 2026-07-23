@@ -1,6 +1,6 @@
 # Book API with JWT Authentication
 
-A RESTful Book Management API built with FastAPI,SQLite, and SQLAlchemy that includes JWT (JSON Web Token) Authentication. Users can register, log in, receive a secure access token, and manage their own books through protected API endpoints.
+A Rest-ful Book Management API built with FastAPI,SQLite, and SQLAlchemy that includes JWT (JSON Web Token) Authentication. Users can register, log in, receive a secure access token, and manage their own books through protected API endpoints.
 This project demonstrates the implementation of authentication, password hashing, database integration, and secure API development using FastAPI.
 # Features
 * User Registration (Signup)
@@ -189,4 +189,4 @@ You can test the API using:
 * Postman
 * Insomnia
 # Author
-**Developed By Muhammad Zeeshan Haider*    AI Engineering Track Learner
+**Developed By Muhammad Zeeshan Haider**    AI Engineering Track Learner 
